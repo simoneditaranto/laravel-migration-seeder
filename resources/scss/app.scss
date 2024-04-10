@@ -1,1 +1,47 @@
 @import "~bootstrap/scss/bootstrap";
+
+.trains{
+
+    .card{
+
+        .card-title{
+            text-transform: capitalize;
+        }
+
+        .list-group{
+
+            .train-code{
+                font-style: italic;
+
+                span{
+                    font-style: normal;
+                }
+            }
+
+            .train-cancelled{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .circle{
+                    width: 15px;
+                    height: 15px;
+
+                    border-radius: 50%;
+
+                    &.red{
+                        background-color: red;
+                    }
+
+                    &.green{
+                        background-color: green;
+                    }
+                }
+            }
+
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+}
