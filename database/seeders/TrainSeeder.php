@@ -23,6 +23,7 @@ class TrainSeeder extends Seeder
             $newTrain->azienda = $faker->word();
             $newTrain->s_partenza = $faker->city();
             $newTrain->s_arrivo = $faker->city();
+            $newTrain->data_partenza = $faker->dateTimeBetween('-2 days', '+2 days');
             $newTrain->orario_partenza = $faker->time();
             $newTrain->orario_arrivo = $faker->time();
             $newTrain->codice_treno = $faker->regexify('[A-R]{2}[0-9]{5}');

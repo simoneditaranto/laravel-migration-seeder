@@ -8,12 +8,14 @@
         <div class="trains d-flex flex-wrap gap-3">
 
             @foreach($trains as $train)
+            @if($train->data_partenza == $dateNow)
             <div class="card" style="width: 15rem;">
                 {{-- <img src="..." class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                     <h5 class="card-title">{{$train->azienda}}</h5>
                 </div>
                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{$train->data_partenza}}</li>
                     <li class="list-group-item">{{$train->s_partenza}} - {{$train->s_arrivo}}</li>
                     <li class="list-group-item">{{$train->orario_partenza}} - {{$train->orario_arrivo}}</li>
                     <li class="list-group-item">A third item</li>
@@ -28,6 +30,7 @@
                     <a href="#" class="card-link">Acquista</a>
                 </div>
             </div>
+            @endif
             @endforeach
 
         </div>

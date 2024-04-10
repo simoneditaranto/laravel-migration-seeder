@@ -11,11 +11,14 @@ class PageController extends Controller
     
     public function index() {
 
+        // tutti i treni del mio db
         $trains = Train::all();
+        // data attuale
+        $dateNow = date('Y-m-j');
 
-        // dd($trains);
+        // dd($dateNow);
 
-        return view('home', compact('trains'));
+        return view('home', compact('trains', 'dateNow'));
     }
 
 }
