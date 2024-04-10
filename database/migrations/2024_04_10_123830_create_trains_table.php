@@ -20,7 +20,7 @@ return new class extends Migration
             $table->time('orario_arrivo', $precision = 0);
             $table->string('codice_treno', 10);
             $table->integer('n_carrozze');
-            $table->boolean('in_orario');
+            $table->boolean('in_orario')->nullable();
             $table->boolean('cancellato');
             $table->timestamps();
         });
